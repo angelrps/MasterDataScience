@@ -1,0 +1,358 @@
+man grep
+find . -name "Finn.txt"
+tree
+sudo apt-get install tree
+tree
+tree | less
+seq 10
+seq 10 20
+seq 10 20 3
+seq 10 3 20
+seq 1 2 10
+seq 1 2 10 > uniq_example.txt
+cat uniq_example.txt
+seq 1 10 >> uniq_example.txt
+cat uniq_example.txt
+uniq uniq_example.txt
+sort uniq_example.txt
+sort -d uniq_example.txt
+sort -n uniq_example.txt
+sort -n uniq_example.txt | uniq
+sort -n -u uniq_example.txt
+sort -n uniq_example.txt | uniq -d
+sort -n uniq_example.txt | uniq -c
+history
+sort -n uniq_example.txt
+sort -nr uniq_example.txt
+sort -nru uniq_example.txt
+cd Data/opentraveldata
+ls
+ll
+head optd_aircraft.csv
+cd
+find . -iname "*optd*"
+cd DS_CL_files/opentraveldata
+head optd_aircraft.csv
+sort optd_aircraft.csv| head
+sort -t "^" -k 6 optd_aircraft.csv | head
+sort -t "^" -k 6r optd_aircraft.csv | head
+sort -t "^" -key= 6r optd_aircraft.csv | head
+sort -t "^" --key=6r optd_aircraft.csv | head
+sort -t "^" -k 1 optd_aircraft.csv | head
+sort -t "^" -k 1r optd_aircraft.csv | head
+sort -t "^" -k 1r optd_aircraft.csv | tail
+sort -t "^" -k 1r optd_aircraft.csv 
+head optd_aircraft.csv
+sort -t "^" -k 1 optd_aircraft.csv | head
+sort -t "^" -k 1r optd_aircraft.csv | 
+sort -t "^" -k 1r optd_aircraft.csv 
+sort -t "^" -k 1r optd_aircraft.csv | head
+sort -t "^" -k 1r optd_aircraft.csv | grep "iata"
+sort -t "^" -k 1r optd_aircraft.csv | grep -n "iata"
+sort -t "^" -k 1r optd_aircraft.csv | head
+sort -t "^" -k 6r optd_aircraft.csv | head
+sort -t "^" -k 6,6 -k8,8 optd_aircraft.csv | head
+sort -t "^" -k 6,6 -k 8,8 optd_aircraft.csv | head
+sort -t "^" -k6,6 -k8,8 optd_aircraft.csv | head
+sort -t "^" -k6,6 optd_aircraft.csv | head
+sort -t "^" -k6,6r  optd_aircraft.csv | head
+sort -t "^" -k6,6r -k8,8 optd_aircraft.csv | head
+sort -t "^" -k6,6r -k8,8r optd_aircraft.csv | head
+head optd_aircraft.csv
+sort -t "^" -k 7,7nr ./optd_aircraft.csv 
+sort -t "^" -k 7,7nr ./optd_aircraft.csv | head
+head optd_aircraft.csv
+sort -t "^" -k 2,2 -u optd_ 
+sort -t "^" -k 2,2 -u optd_ optd_aircraft.csv
+sort -t "^" -k 2,2u  optd_ optd_aircraft.csv
+sort -u -t "^" -k 2,2  optd_ optd_aircraft.csv
+sort -u -t "^" -k 2,2u  optd_aircraft.csv
+sort -u -t "^" -k 2,2  optd_aircraft.csv
+sort -t "^" -k 2,2  optd_aircraft.csv | wc
+sort -t "^" -k 2,2 -u  optd_aircraft.csv | wc
+sort -t "^" -k 2,2 -u  optd_aircraft.csv
+sort -u -t "^" -k 2,2 optd_aircraft.csv | wc
+sort -ut "^" -k 2,2 optd_aircraft.csv | wc
+sort -tu "^" -k 2,2 optd_aircraft.csv | wc
+cut -d "^" -f 1,3-5 optd_aircraft.csv| head
+cut -d "^" -f 1,3-5 optd_aircraft.csv >optd_aircraft_4_columns.csv
+cut -d "^" -f 1,3-5 --output-delimiter ";" optd_aircraft.csv| head
+cut -d "^" -f 1,3-5 --output-delimiter "BUGGGGG" optd_aircraft.csv| head
+cut -d "^" -f 1,3-5 --output-delimiter ": " optd_aircraft.csv| head
+cut -d "^" -f 1,3-5 --output-delimiter "\t" optd_aircraft.csv| head
+cut -d "^" -f 1,3-5 --output-delimiter "\t" optd_aircraft.csv| less
+cat optd_aircraft.csv | tr "^" "\t" | head
+cut -d "^" --output-delimiter "\t" optd_aircraft.csv| head
+seq 1 10>numbers
+cat numbers
+paste numbers
+cat numbers numbers
+paste numbers numbers
+paste -d "^" numbers numbers
+paste -s  numbers
+paste -s -d "^" numbers 
+paste - - - numbers
+paste --- numbers
+cat  numbers | paste - - - 
+paste - - -  numbers
+paste - -  numbers
+cat  numbers | paste - - 
+paste numbers numbers
+paste numbers optd_aircraft.csv | head
+paste optd_aircraft.csv  optd_aircraft.csv | head
+paste numbers numbers numbers
+paste optd_aircraft.csv numbers numbers
+paste optd_aircraft.csv numbers numbers | head
+paste $(cat numbers) $(cat numbers)
+paste <numbers <numbers
+paste <(cat numbers) <(cat numbers)
+paste <(seq 1 10) <(seq 1 10)
+paste <(seq 1 10) <(head optd_aircraft.csv)
+paste <(seq 1 10) <(head -1 optd_aircraft.csv)
+head -1 optd_aircraft.csv
+head -1 optd_aircraft.csv | tr "^" "\n"
+paste <(seq 1 10) <(head -1 optd_aircraft.csv | tr "^" "\n")
+echo "master data science" | tr a A
+echo "master data science" | tr ma AM
+echo "master      data      science" | tr -s
+echo "master      data      science" | tr -s " "
+echo "maaaaaaaster      data      science" | tr -s " a"
+echo "maaaaaaaster      data      science" | tr -d " a"
+echo "maaaaaaaster      data      science" | tr -cd " a"
+cat optd_aircraft.csv | tr "^" "\t" | head
+echo "master data science" | tr "[:lower:]" "[:upper:]"
+cd ../shell
+cat Text_example.txt
+grep this Text_example.txt
+grep -n this Text_example.txt
+grep -n this Text_example.txt Text_example.txt
+grep -n this Text_example.txt 
+grep -nv this Text_example.txt 
+grep -nv This Text_example.txt 
+grep -n This Text_example.txt 
+grep -nl This Text_example.txt 
+grep -nI This Text_example.txt 
+grep -ni This Text_example.txt 
+grep -n this Text_example.txt 
+grep -nc this Text_example.txt 
+grep -c this Text_example.txt 
+grep -n -o this Text_example.txt 
+grep -n -o this Text_example.txt | wc
+grep -nc -o this Text_example.txt 
+grep -ni -o this Text_example.txt 
+grep "^T" Finn.txt
+grep -n "^T" Finn.txt | less
+grep -n -o "^T" Finn.txt | less
+grep -n "T" Finn.txt |wc
+grep -n "^T" Finn.txt |wc
+cd ..
+cd ...
+cd ..
+git init test
+git init test3
+cd test3
+touch file
+git add file
+git commit -m "file is here"
+git lo
+git log
+git status
+rm file
+git commit -m "deleted"
+git add file
+git commit -m "deleted"
+touch file3
+git add file3
+git commit -m "file 3"
+ll
+git log
+rm file3
+git status
+git commit -m "file 3 deleted"
+git add file3
+git commit -m "file 3 deleted"
+ll
+echo Sunday | sed -ssdaysnights
+echo Sunday | sed ssdaysnights
+echo Sunday | sed s/day/night/
+echo Sunday.day | sed s/day/night/
+echo Sunday.day | sed s/day/night/g
+cd
+cd DS_CL_files
+cd shell
+sed 's/this/that/g' Text_example.txt
+sed 's/this/WHAAT/g' Text_example.txt
+sed 's/this/WHAAT/g' Text_example.txt Text_example.txt
+sed 's/this/WHAAT/gl' Text_example.txt Text_example.txt
+sed 's/this/WHAAT/gI' Text_example.txt Text_example.txt
+sed 's/this/WHAAT/gI' Text_example.txt
+sed s/this/WHAAT/gI Text_example.txt
+ll
+sed -i s/this/WHAAT/gI Text_example.txt.copy
+cat Text_example.txt
+cat Text_example.txt.copy
+git reset --hard ~HEAD
+git reset --hard HEAD
+sed s/this/WHAAT/gI Text_example.txt.copy
+sed -i s/this/WHAAT/gI Text_example.txt.copy 
+git reset --hard HEAD
+seq 5
+seq 5 | sed '2,4d'
+seq 5 | sed '2;4d'
+seq 5 | sed '2d;4d'
+seq 5 | sed '2,4d'
+seq 5 | sed '2d;4d'
+seq 10 15 | sed '3d'
+seq 10 15 | sed '/14/d'
+sed -i '/this/d' Text_example.txt
+seq 10 15 | sed '/14/!d'
+seq 10 15 | sed '3!d'
+git reset --hard HEAD
+cd ../opentraveldata
+ll
+zip output.zip optd_aircraft_4_columns.csv optd_aircraft.csv optd_airlines.csv optd_por_public.csv 
+ll
+mkdir zip
+cp output.zip zip
+cd zip
+unzip output.zip
+ll
+cd ..
+ll
+sudo apt-get install zip
+zipinfo output.zip
+zcat output.zip
+zless output.zip
+zless -n output.zip
+zless output.zip
+zgrep "iata" output.zip
+zless output.zip
+unzip -c output.zip optd_aircraft_4_columns.csv | less
+zipinfo output.zip
+unzip -c output.zip optd_aircraft_4_columns.csv 
+gzip optd_aircraft_4_columns.csv optd_aircraft.csv optd_airlines.csv optd_por_public.csv 
+ll
+zcat optd_aircraft_4_columns.csv.gz | less
+zcat optd_aircraft_4_columns.csv.gz | cut -d "^" -f 1-3
+zcat optd_aircraft_4_columns.csv.gz | cut -d "^" -f 1-3 | head
+gunzip optd_aircraft_4_columns.csv.gz optd_aircraft.csv.gz optd_airlines.csv.gz optd_por_public.csv.gz 
+ll
+gzip -k optd_por_public.csv 
+ll
+zip optd_por_public.csv.zip optd_por_public.csv 
+ll
+bzip2 *.csv 
+ll
+bzcat optd_aircraft_4_columns.csv.bz2 | head
+bunzip2 optd_aircraft_4_columns.csv.bz2 optd_aircraft.csv.bz2 optd_airlines.csv.bz2 optd_por_public.csv.bz2 
+ll
+bzip2 -k optd_por_public.csv
+ll
+tar -czf "optd.tar.gz" optd_aircraft_4_columns.csv optd_aircraft.csv optd_airlines.csv optd_por_public.csv 
+ll
+mv optd.tar.gz my_data
+ll
+zcat my_data
+ll
+mkdir my_data_tar
+cp my_data my_data_tar
+cd my_data_tar
+ll
+unzip my_data
+tar -xf my_data
+ll
+cd ..
+ll
+tar -cjf "optd.tar.bz2" optd_aircraft_4_columns.csv optd_aircraft.csv optd_airlines.csv optd_por_public.csv 
+ll
+tar -cf "optd.tar" optd_aircraft_4_columns.csv optd_aircraft.csv optd_airlines.csv optd_por_public.csv 
+ll
+paste <(seq 1 10) <(head -1 optd_aircraft.csv | tr "^" "\n")
+touch csv_number_column.sh
+ll
+rm optd_por_public.csv.zip output.zip 
+rm optd_por_public.csv.bz2 optd.tar.bz2 
+ll
+rm -rf my_data my_data_tar 
+rm -rf zip
+ll
+rm -rf optd.tar
+ll
+rm -rf optd_por_public.csv.gz
+ll
+gedit csv_number_column.sh
+nano csv_number_column.sh
+paste <(seq 1 10) <(head -1 optd_aircraft.csv | tr "^" "\n")
+cat csv_number_column.sh
+head -1 optd_aircraft.csv
+head -1 optd_aircraft.csv | tr "^" "\n"
+head -1 optd_aircraft.csv | tr "^" "\n"|wc -l 
+paste <(head -1 optd_aircraft.csv | tr "^" "\n"|wc -l) <(head -1 optd_aircraft.csv | tr "^" "\n")
+paste <(head -1 optd_aircraft.csv | tr "^" "\n") <(head -1 optd_aircraft.csv | tr "^" "\n")
+cat .csv_number_column.sh.swp
+cat .csv_number_column
+cat csv_number_column.sh
+bash csv_number_column.sh
+./csv_number_column.sh
+chmod 777 csv_number_column.sh
+ll
+./csv_number_column.sh
+which  bash
+./csv_number_column.sh
+which bash
+./csv_number_column.sh
+shell
+sh
+bash csv_number_column.sh
+sh csv_number_column.sh
+cat csv_number_column.sh 
+cat csv_number_column.sh
+sh csv_number_column.sh
+fg
+zsh csv_number_column.sh
+./csv_number_column.sh
+VARIABLE=algo
+echo $VARIABLE
+./csv_number_column.sh
+echo $0
+bash
+exit
+./csv_number_column.sh hahaha
+./csv_number_column.sh hahaha "this is file place holder"
+./csv_number "^" "file"
+./csv_number_column.sh "^" optd_por_public.csv
+nano csv_number_column.sh
+echo $VARIABLE 3
+echo $VARIABLE3
+echo ${VARIABLE}3
+./csv_number_column.sh "^" optd_por_public.csv
+echo $PATH
+echo $PATH | tr : "\n"
+cd
+mkdir my_scripts
+rm -rf my_scripts
+mkdir my_scripts
+mv DS_CL_files/opentraveldata/csv_number_column.sh my_scripts
+cd .
+cd ..
+ll
+cd
+echo 'PATH=$PATH:my_sripts' > test 
+cat test
+echo 'PATH=$PATH:my_scripts' > test 
+cat test
+echo 'PATH=$PATH:~/my_scripts' > test 
+cat test
+echo "PATH=$PATH:~/my_scripts" 
+cat test
+echo "PATH=$PATH:~/my_scripts" >> .zshrc
+gedit .zshrc
+echo 'PATH=$PATH:~/my_scripts' >> .bashrc
+tail .bashrc
+echo $0
+exit
+cd DS_CL_files/opentraveldata
+./csv_number_column.sh "^" optd_por_public.csv
+csv_number_column.sh "^" optd_por_public.csv
+cd
+cat .history > 2019-11-22.txt

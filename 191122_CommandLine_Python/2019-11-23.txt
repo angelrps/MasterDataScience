@@ -1,0 +1,104 @@
+find / -name "*.txt" -exec ls -l {}\; -exec sleep 5 \;
+find / -name "*.txt" -exec "ls -l {}" \; -exec sleep 5 \;
+find . -name "*.txt" -exec "ls -l {}" \; -exec sleep 5 \;
+find . -name "*.txt" -exec "ls -l {}" \;
+find . -type f -name "*.txt" -exec "ls {}" \;
+find . -type f -name "*.txt" -exec "ll {}" \;
+find . -type f -name "*.txt" | head
+ls ./.mozilla/firefox/ad5gbazq.default/pkcs11.txt
+find . -type f -name "*.txt" -exec "ls -l {}" \;
+find . -type f -name "*.txt" -exec "ls -l {}" \; | head
+find . -type f -name "*.txt" -exec "echo F" \;
+find . -type f -name "*.txt" -exec sleep 5 \;
+find . -type f -name "*.txt" 
+find . -type f -name "*.txt" -exec echo "h" \;
+find . -type f -name "*.txt" -exec ls -l {}  \;
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \;
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \; &
+echo HOLA
+fg
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \; 
+bg
+fg
+jobs
+gedit &
+jobs
+ps 
+ps -U dsc
+kill -9 18246
+jobs
+kill %1
+kill 1
+jobs
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \; 
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \; &
+jobs
+fg %3
+jobs
+kill %4
+jobs
+kill %1
+jobs
+ps -U dsc
+kill 19419
+ps -U dsc
+kill -9 19419
+ps -U dsc
+find . -type f -name "*.txt" -exec ls -l {}  \; -exec sleep 5 \; &
+ps -U dsc | grep sleep
+ps -U dsc | grep find
+kill %1
+jobs
+kill %2
+pip install csvkit
+which csvcut
+which pip
+which python
+cd DS_CL_files/opentraveldata
+ll
+csvlook-d "^"  optd_aircraft.csv
+csvlook -d "^"  optd_aircraft.csv
+csvlook -d "^"  optd_aircraft.csv | less
+csvlook -d "^"  optd_aircraft.csv | less -S
+csvlook -d "^"  optd_aircraft.csv
+csvlook -d "^"  optd_aircraft.csv | less -S
+csvlook -d "^"  optd_por_public.csv | less -S
+csvlook -d "^"  optd_por_public.csv > file.txt
+less -S file.txt
+less file.txt
+less -n file.txt
+cat -n  file.txt | less
+cat -n  file.txt | less -S
+csvstat -d "^" optd_airlines.csv
+csvstat -d "^" optd_airlines.csv | less
+csvstat -d "^" optd_aircraft.csv | less
+csvcut -d "^" -c iata_code 
+csvcut -d "^" -c iata_code optd_aircraft.csv
+csvcut -d "^" -c iata_code optd_aircraft.csv | less
+csvcut -d "^" -c iata_code, manufacturer optd_aircraft.csv
+head optd_aircraft.csv
+csvcut -d "^" -c iata_code, manufacturer optd_aircraft.csv
+csvcut -d "^" -c iata_code,manufacturer optd_aircraft.csv
+csvcut -d "^" -c iata_code, manufacturer optd_aircraft.csv | csvstat 
+csvcut -d "^" -c iata_code,manufacturer optd_aircraft.csv | csvstat
+csvcut -d "^" -c iata_code,manufacturer optd_aircraft.csv | csvstat -d ","
+csvcut -d "^" -c iata_code,manufacturer -D ";"  optd_aircraft.csv 
+csvgrep -d "^" -m380 optd_aircraft.csv
+csvgrep -d "^" -m 380 optd_aircraft.csv
+csvgrep -d "^" -c iata_code -m 380 optd_aircraft.csv
+csvgrep -d "^"  -m 380 optd_aircraft.csv
+csvgrep -d "^" -c iata_code -m 380 optd_aircraft.csv
+csvgrep -d "^" -c manufacturer -m Airbus optd_aircraft.csv
+csvsql -d "^" optd_aircraft.csv
+csvsql -d "^" -i mysql optd_aircraft.csv 
+csvsql -d "^" -i mysql optd_aircraft.csv > table.sql
+cat table.sql
+cd
+python
+ipython
+jupyter-notebook
+cd python_class
+jupyter-notebook
+ll
+cd
+cat .history >2019.11.23
