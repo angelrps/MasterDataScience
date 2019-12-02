@@ -1,0 +1,495 @@
+ll
+ls -lrt
+cd Repos
+ls -lrt
+cd 
+mkdir git
+ls 
+pwd
+cd /home/dsc
+pwd
+ls
+cd git
+pwd
+ls
+cd ..
+pwd
+ls /
+pwd
+cd git
+mkdir master_kschool_tst
+ls
+cd master_kschool_tst
+ls 
+echo "no me gusta esta clase" > README.md
+ls
+cat README.md
+git init
+ls
+git add README.md
+git commit -m "He anadido un readme file"
+git config
+cd
+cat .gitconfig
+git config --global user.name="Igor Arambasic"
+git config --global user.name "Igor Arambasic"
+cat .gitconfig
+git config --global user.email "ihr@google.com"
+cd -
+pwd
+cd ..
+cd master_kschool_tst
+cd 
+cd git/master_kschool_tst
+pwd
+git commit -m "He anadido un readme file"
+git remote add origin https://github.com/Beovulfo/master_kschool_tst.git
+git push origin master
+cd ..
+pwd
+mkdir kk
+cd kk
+git clone https://github.com/Beovulfo/master_kschool_tst.git
+cd ..
+mkdir kk2
+cd kk2
+cd ..
+cd kk
+ls -lrt
+cd master_kschool_tst
+ls -lrt
+echo "soy Toni" > README.md
+git add README.md
+git commit -m "Beovulfo"
+git push orgin master
+git push origin master
+git pull origin master
+vim README.md
+vi README.md
+gedit README.md
+git commit -m "conflict solved"
+git add README.md
+git commit -m "conflict solved"
+git push origin master
+echo "soy Toni y no me gusta esta prueba" > README.md
+git add README.md
+git commit -m "tengo miedo"
+git push origin master
+git pull origin master
+git add README.md
+git commit -m "vay telaaaa"
+git push origin master
+gedit README.md
+git add README.md
+git commit -m "conflict solved again"
+git push origin master
+cd 
+cd git/master_kschool_tst
+git branch viernesTriste
+touch toyTriste.md
+git add toyTriste.md
+git commit -m "added toyTriste"
+git push -u origin viernesTriste
+git add toyTriste.md
+ls
+git checkout viernesTriste
+ls -lrt
+ls
+git checkout master
+ls -lrt
+git push origin master
+ls -lrt
+git pull origin master
+ls -lrt
+cat README.md
+git push origin master
+ls -lrt
+git checkout viernesTrsite
+git checkout viernesTriste
+ls -lrt
+touch toyTriste2.md
+git add toyTriste2.md
+git commit -m "liada parda solucionada"
+git push origin viernesTriste
+cd ..
+ls -lrt
+rm -r master_kschool_tst
+rm -rf master_kschool_tst
+git clone https://github.com/Beovulfo/master_kschool_tst.git
+ls
+cd master_kschool_tst
+git branch viernesFeliz
+git push -u origin viernesFeliz
+git checkout viernesFeliz
+cd ..
+ls 
+cd master_kschool_tst
+ls -lrt
+git status
+touch toyFeliz.md
+git add toyFeliz.md
+git commit -m "por un pelo la liamos"
+git status
+git push origin viernesFeliz
+git checkout master
+ls -lrt
+git pull origin master
+ls 
+ls -lrt
+git status
+touch notebook.ipynb
+git add notebook.ipynb
+git commit -m "my first notebook"
+git push origin master
+echo Hola
+echo $SHELL
+bash
+echo $SHELL
+echo $0
+exit
+sh
+exit
+echo $SHELL
+whoami
+cat /etc/os-release
+bash
+exitr
+exit
+cat /etc/os-release
+cat /proc/cpuinfo
+MASTER=Kschool
+echo $MASTER
+echo $MASTER $SHELL
+echo "$MASTER $SHELL"
+echo '$MASTER $SHELL'
+echo "$MASTER" "$SHELL"
+echo `$MASTER`
+date
+echo `date`
+echo date
+echo; date
+echo "$(date)"
+echo "date"
+echo 'date'
+echo "$MASTER"
+echo '$MASTER'
+echo `date`
+echo "rehrh
+echo "rehrh\
+sigo"
+echo "This is" \\
+"second one"
+echo "This is" "second one"
+echo "first line \n second line"
+echo 'first line \n second line'
+echo -e "test \n nnn"
+echo -e "test \n  \t \t  nnn"
+echo -e "test\t\tnnn"
+echo -e "test\\t\tnnn"
+echo -e "test\\nnn"
+echo -e "test\\m"
+echo -e "test\\\m"
+echo -e "test\\\\m"
+echo -e "test\\\\\m"
+echo this is echo of echo
+echo this is; echo of echo
+echo this is\; echo of echo
+cd Repos
+git clone https://github.com/IgorAramb/DS_CL_files.git\
+
+cd /
+ls
+cd home
+ls
+cd
+pwd
+echo $PWD
+cd -
+cd /
+cd 
+cd -
+cd .config
+cd 
+ls
+ls -1
+ls -l
+ls -s
+ls -s -1
+ls -s1
+ls -lrt
+ls -l
+cd Repos/DS_CL_files
+ls -l
+ls -S
+ls -Ss
+cd opentraveldata
+ll
+ls -Ss1
+ls -1sS
+ls -1sSr
+ls -1st
+ls -lt
+ls -l
+cd
+ls -a
+cd Repos/DS_CL_files
+ls -a
+git clone https://github.com/IgorAramb/DS_CL_files.git../DS_files\
+
+git clone https://github.com/IgorAramb/DS_CL_files.git ../DS_files\
+
+ls -a
+cd ..
+ll
+cd DS_CL_files/shell
+ls
+cat Text_example.txt
+cat -n Text_example.txt
+cat -n Text_example.txt Text_example.txt Text_example.txt
+cat *
+ls
+cat *.txt
+ls
+cd
+cd Repos/DS_CL_files/shell
+ls -l
+cd 
+cd -
+ls -a
+ls -la
+cd ..
+ls -la
+ls -l opentraveldata
+ls -la opentraveldata
+ls -la
+ls -la opentraveldata
+ls -la .git
+ls -l
+chmod u-w README.md
+ls -l
+chmod u+w,o-x README.md
+chmod 777 README.md
+ls -l
+cd
+mkdir one
+cd one
+mkdir this and that
+ls
+mkdir "this and that"
+ls
+mkdir this/that
+ls
+mkdir two/three/four
+mkdir -p two/three/four
+touch file
+ll
+cd
+ll *.txt
+touch example_unique.txt
+ll *.txt
+cd one
+cp file file.copy
+ll
+copy file and
+cp file and
+ls and
+touch and
+ll
+mkdir file
+cp file and/and
+alias
+cp file file.copy this
+cp ./file ../2018-04-27.txt ../2019-05-11.txt ./two
+cp two three
+cp -r two three
+ls three
+ll
+cp -r two four
+ls four
+cp -r two and
+ls two
+ls and
+cp -r two two_copy
+ls two
+cp -r two ../two_encima
+ls ../two_encima
+cp -r two ../two_encima
+ls ../two_encima
+ll
+chmod 777 file
+ls file
+ls -l file*
+rm file.copy
+ll
+chmod 777 file
+ls -l file*
+cp file file2
+ls -l file*
+cp -p file file3
+ls -l file*
+ll
+mv four four_new
+mv file and/new_file
+rm file2 file3 
+rm -rf and four_new that this this\ and\ that three two two_copy  
+ll
+cd
+git init
+cd
+cd ..
+cd
+cd Repos
+cd
+rm -rf .git
+cd
+mkdir first_dir
+rm -rf first_dir
+mkdir first_dir
+cd first_dir
+touch text_file.txt
+ll
+chmod g+x,o+w text_file.txt
+ls -l
+chmod g+x,o+w text_file.txt
+ mkdir sub1 sub2 text_file
+cp text_file.txt sub1
+mv text_file.txt sub2/text_file.txt.2
+cp -r sub1 sub3
+mv sub2/text_file.txt.2 sub2/text_file.txt.backup
+mv sub2/text_file.txt.backup .text_file.txt.backup 
+rm -rf sub2
+type ll
+type cd
+alias
+alias cp=cp -p
+alias
+alias cp='cp -p'
+alias
+type cp
+ls .zshrc
+ls .bashrc
+alias
+cd Repos/DS_CL_files/shell
+less Finn.txt
+less -N Finn.txt
+man ls
+man -N ls
+cd
+history
+history -100
+echo $HISTSIZE
+cd Repos/DS_CL_files/opentraveldata
+ll
+head ./optd_aircraft.csv
+ll
+head optd_por_public.csv
+head -5 ./optd_aircraft.csv
+head -n 5 ./optd_aircraft.csv
+head -n +5 ./optd_aircraft.csv
+head -n -5 ./optd_aircraft.csv
+head -n -405 ./optd_aircraft.csv
+head -n -455 ./optd_aircraft.csv
+tail ./optd_aircraft.csv
+tail -5 ./optd_aircraft.csv
+tail -n -5 ./optd_aircraft.csv
+tail -n +5 ./optd_aircraft.csv
+wc optd_aircraft.csv
+wc -l optd_aircraft.csv
+wc -w optd_aircraft.csv
+wc -c optd_aircraft.csv
+head optd_aircraft.csv 
+head optd_aircraft.csv |wc 
+head optd_aircraft.csv | wc 
+head optd_aircraft.csv | tail -5 
+head optd_aircraft.csv | tail -5 | wc
+cat -n optd_aircraft.csv | head 
+cat -n optd_aircraft.csv | head | tail -5
+cat -n optd_aircraft.csv | head | tail -5 | wc
+cat -n optd_aircraft.csv | head | tail -5 
+cat -n optd_aircraft.csv | head | tail -5 > 5lines.csv
+ll
+cat -n optd_aircraft.csv | head | tail -5 >> 5lines.csv
+wc 5lines.csv
+cat -n optd_aircraft.csv | head | tail -5 > 5lines.csv
+cat -n optd_aircraft.csv | head | tail -5 >> 6lines.csv
+ll
+echo $SHELL > my_shell.txt
+echo '$SHELL' >> my_shell.txt
+echo `date` >> my_shell.txt
+cat my_shell.txt
+echo $SHELL
+echo $(date) >> my_shell.txt
+cat my_shell.txt
+<my_shell.txt wc
+<my_shell.txt| wc
+cat my_shell.txt| wc
+wc my_shell.txt
+<       my_shell.txt| wc
+find
+ls
+ls -1
+cd ..
+find
+cd 
+find | wc
+find ./my_scripts
+find -name  .
+find -name 
+find -name "text_file*"
+find ./first_dir -name "text_file*"
+find -name "text_file*" ./first_dir
+find -name "text_file*"
+find . -name "text_file*"
+find . -iname "text_file*"
+find . -iname "tEXt_file*"
+find . -name "tEXt_file*"
+find . -iname "tEXt_file*"
+find . -iname "tEXt_file*" -type d
+find . -iname "tEXt_file*" -type f
+find . -maxdepth 4 -iname "tEXt_file*" -type f 
+find . -maxdepth 6 -iname "tEXt_file*" -type f 
+find . -maxdepth 7 -iname "tEXt_file*" -type f 
+find . -maxdepth 8 -iname "tEXt_file*" -type f 
+find . -maxdepth 4 -iname "tEXt_file*" -type f 
+find . -maxdepth 4 -iname "tEXt_file*" -type f -perm 777 
+find .  -iname "tEXt_file*" -type f -perm 777 
+find .  -iname "tEXt_file*" -type f ! -perm 777 
+find .  -iname "tEXt_file*" -type f ! -perm 777 -empty
+find .  -iname "tEXt_file*" -type f ! -perm 777 -size -10M
+find . -mmin -60
+find . -maxdepth 4 -iname "tEXt_file*" -type f -perm 777 
+find .  -iname "tEXt_file*" 
+find .  -iname "tEXt_file*" -type f
+find .  -iname "tEXt_file*" -type f | wc
+find .  -iname "tEXt_file*" -type f -exec echo "Found it" \;
+find .  -iname "tEXt_file*" -type f -exec echo "Found it" ;
+find .  -iname "tEXt_file*" -type f -exec echo "Found it" \;
+find .  -iname "tEXt_file*" -type f
+find .  -iname "tEXt_file*" -type f -exec echo "Found it" \;
+find .  -iname "tEXt_file*" -type f -exec ls -l {} \;
+ls -l ./anaconda3/pkgs/python-3.7.1-h0371630_7/lib/python3.7/distutils/__pycache__/text_file.cpython-37.pyc
+find .  -iname "tEXt_file*" -type f -exec ls -s {} \;
+find .  -iname "tEXt_file*" -type f -exec cat {} \;
+find .  -iname "tEXt_file*" -type f -exec cat {} \; |less
+find .  -iname "tEXt_file*" -type f
+find .  -iname "tEXt_file*" -type f -exec ls -s {} | wc \;
+find .  -iname "tEXt_file*" -type f -exec sh -c "ls -s {} | wc" \;
+find .  -iname "tEXt_file*" -type f -exec zsh -c "ls -s {} | wc" \;
+find .  -iname "tEXt_file*" -type f -exec zsh  "ls -s {} | wc" \;
+sh
+bash echo 
+bash -c echo Hola 
+bash -c echo Hola > test
+ll
+bash -c echo HolaHOLALLALALA > test
+bash -c echo HolaHOLALLALALA 
+cat test
+bash -c echo HolaHOLALLALALA > test
+cat test
+bash -c "echo HolaHOLALLALALA > test"
+cat test
+zsh -c "echo HolaHOLALLALALA > test"
+sh -c "echo HolaHOLALLALALA > test"
+bash  echo Hola > test
+find .  -iname "tEXt_file*" -type f -exec zsh -c "ls -s {} | wc" \;
+cat .history > 2019_11_16.txt

@@ -1,0 +1,3 @@
+Cómo eliminar un directorio en github
+Cómo añadir un directorio en github
+Cómo añadir un archivo de word en Github (mis apuntes)
