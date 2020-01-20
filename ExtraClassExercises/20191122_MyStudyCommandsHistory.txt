@@ -1,0 +1,588 @@
+    1  echo hola
+    2  echo $shell
+    3  echo $SHELL
+    4  echo $0
+    5  exit
+    6  cat /etc/os-release
+    7  cat /proc/cpuinfo
+    8  MASTER=Kschool
+    9  echo $Master
+   10  echo $MASTER
+   11  echo $MASTER $SHELL
+   12  echo '$MASTER $SHELL'
+   13  echo ´$MASTER´
+   14  echo "This is" "second one"
+   15  echo "first \n second"
+   16  echo -e "first \n second"
+   17  echo -e "test\\m"
+   18  cd
+   19  cd git
+   20  git clone https://github.com/IgorAramb/DS_CL_files.git
+   21  sudo apt-get update
+   22  sudo apt-get install liquidprompt
+   23  liquidprompt_activate
+   24  cd
+   25  pwed
+   26  pwd
+   27  cd -
+   28  cd .cd
+   29  cd
+   30  cd .cd
+   31  ls
+   32  ls -1
+   33  ls -l
+   34  ls -s
+   35  ls -l -1
+   36  ls -s1
+   37  cd
+   38  ls -a
+   39  ls -a1
+   40  cd git/DS_CL_files
+   41  ls -a
+   42  cd .
+   43  ls -a
+   44  pwd
+   45  cd /shell
+   46  ls
+   47  cd shell
+   48  pwd
+   49  ls
+   50  cat Test_example.txt
+   51  cat Text_example.txt
+   52  cat -n Text_example.txt
+   53  cat Finn.txt 
+   54  cat *.txt
+   55  cd
+   56  cd git
+   57  pwd
+   58  cd DS_CL_files/
+   59  cd /shell
+   60  pwd
+   61  ls
+   62  ls -a
+   63  cd shell
+   64  ls -a
+   65  ls -la
+   66  ls -l
+   67  cd
+   68  mkdir one
+   69  cd one
+   70  mkdir this and that
+   71  ls
+   72  mkdir "this and that"
+   73  ls
+   74  touch file
+   75  ls
+   76  ll
+   77  cp file file.copy
+   78  ll
+   79  cp file and
+   80  cd and
+   81  ls
+   82  cd ..
+   83  cp file file.copy this
+   84  cp -r two three
+   85  cd three
+   86  ll
+   87  mkdir three
+   88  mkdir two
+   89  ll
+   90  cp -r two and
+   91  ls two
+   92  chmod 777 file
+   93  ls -l
+   94  cp file file2
+   95  ls
+   96  ls -l file*
+   97  cp -p  file file3
+   98  ls -l *file
+   99  ls -l file*
+  100  cd
+  101  mkdir first_dir
+  102  cd first_dir
+  103  touch text_file.txt
+  104  chmod g+x,o+w text_file.txt
+  105  ll
+  106  mkdir sub1 sub2 text_file
+  107  cp text_file.txt sub1/
+  108  mv text_file.txt sub2/text_file.txt.2
+  109  cp -r sub1 sub3
+  110  mv sub2/text_file.txt.2 sub2/text_file.txt.backup
+  111  mv sub2/text_file.txt.backup .text_file.txt.backup
+  112  rm -rf sub2
+  113  type ll
+  114  type cd
+  115  alias
+  116  alias cp='cp -p'
+  117  man ls
+  118  man -N ls
+  119  whoami
+  120  cat /etc/os-release
+  121  cat /etc/
+  122  zsh
+  123  nash
+  124  basg
+  125  bash
+  126  history
+  127  git clone https://github.com/IgorAramb/DS_CL_files.git
+  128  cd
+  129  cd git/DS_CL_files/opentraveldata
+  130  ll
+  131  head optd_aircraft.csv
+  132  head optd_por_public
+  133  head optd_por_public.csv
+  134  head -5 optd_aircraft.csv
+  135  tail optd_aircraft.csv
+  136  wc optd_aircraft.csv
+  137  head optd_aircraft.csv |wc
+  138  head optd_aircraft.csv|tail-5
+  139  head optd_aircraft.csv | tail -5
+  140  head optd_aircraft.csv | tail -5 | wc
+  141  cat -n optd_aircraft.csv | head
+  142  cat -n optd_aircraft.csv | head | tail -5 | wc
+  143  cat -n optd_aircraft.csv | head | tail -5
+  144  cat -n optd_aircraft.csv | head | tail -5 > 5lines.csv
+  145  ll
+  146  echo $SHELL > my_shell.txt
+  147  echo $SHELL >> my_shell.txt
+  148  echo `date`>> my_shell.txt
+  149  cat my_shell.txt
+  150  echo '$SHELL' >> my_shell.txt
+  151  cat my_shell.txt
+  152  echo $(date) >> my_shell.txt
+  153  cat my_shell.txt
+  154  find
+  155  cd ..
+  156  find
+  157  find | wc
+  158  find –name *text_file*"
+  159  cd
+  160  cd..
+  161  find -name "text_file"
+  162  find -name "text_file*"
+  163  find -iname "tEXt_file*" -type d
+  164  find -maxdepth 4 -iname "tEXt_file*" -type d
+  165  find -maxdepth 6 -iname "tEXt_file*" -type d
+  166  find -maxdepth 6 -iname "tEXt_file*" -type d -perm 777
+  167  find -iname "tEXT_file*" -type f -exec echo "Found it" \;
+  168  find -maxdepth 4 -iname "tEXt_file*" -type cd
+  169  cd
+  170  pwd
+  171  cd ..
+  172  pwd
+  173  cd ..
+  174  cd
+  175  cd ~
+  176  pwd
+  177  cd git
+  178  pwd
+  179  mkdir rep_exercise
+  180  cd ..
+  181  pwd
+  182  cd re_exercise
+  183  cd git
+  184  cd rep_exercise
+  185  git init
+  186  git add file_test
+  187  echo "creando un archivo test" > myfile.md
+  188  cd ..
+  189  cd rep_exercise/
+  190  add myfile.md
+  191  git add myfile.md
+  192  git commit myfile.md
+  193  cd git/rep_exercise/
+  194  git commit -m "intentando primer commit v2"
+  195  git push origin master
+  196  git config -- global user.name="angelrps"
+  197  git config --global user.name="angelrps"
+  198  git status
+  199  git log
+  200  git remote -v
+  201  git remote add origin https://https://github.com/angelrps/rep_exercise.git
+  202  git push origin master
+  203  git remote add origin https://https://github.com/angelrps/rep_exercise.git
+  204  git remote add origin https://github.com/angelrps/rep_exercise.git
+  205  git push origin master
+  206  rm rep_exercise
+  207  cd ..
+  208  rm rep_exercise/
+  209  rmdir rep_exercise/
+  210  rmdir -r rep_exercise/
+  211  rm -rf rep_exercise/
+  212  mkdir rep_exercise
+  213  cd rep_exercise/
+  214  git init
+  215  echo "creando un archivo de prueba" > myfile.md
+  216  pwd
+  217  ls
+  218  git add myfile.md 
+  219  git commir myfile.md
+  220  git commit myfile.md 
+  221  git commit -m "primer commit the myfile.md"
+  222  git push origin master
+  223  git remote add origin https://github.com/angelrps/rep_exercise.git
+  224  git push origin master
+  225  git diff
+  226  git diff myfile.md
+  227  git fetch myfile.md
+  228  angelrps
+  229  git clone https://github.com/angelrps/rep_exercise.git
+  230  ls
+  231  rm -rf rep_exercise/
+  232  ls
+  233  echo "cambiando el texto de dentro" > myfile.md 
+  234  git add myfile.md 
+  235  git commit myfile.md 
+  236  git commit -m "acabo de cambiar el texto" myfile.md 
+  237  git push origin master
+  238  git status
+  239  git remote show origin
+  240  echo "añadiendo una línea al final" >> myfile.md 
+  241  git status
+  242  git add myfile.md 
+  243  git commit myfile.md 
+  244  git commit -m "he añadido una línea al final" myfile.md 
+  245  git push origin master
+  246  gs
+  247  git ls-files
+  248  git log
+  249  git config -l
+  250  echo "testing how to rename a file" > renameME.txt
+  251  ls
+  252  git add renameME.txt 
+  253  git commit -m "first commit" renameME.txt 
+  254  git status
+  255  git push origin master
+  256  git mv renameME.txt renameME_NEW.txt
+  257  git commit -m "I have just renamed you" renameME_NEW.txt 
+  258  git push origin master
+  259  git rme renameMW.txt
+  260  git rm renameMW.txt
+  261  cd ..
+  262  mkdir MasterDataScience
+  263  cd MasterDataScience/
+  264  git init
+  265  cd ..
+  266  mv rep_exercise/ MasterDataScience/
+  267  git remote add origin https://github.com/angelrps/MasterDataScience.git
+  268  cd MasterDataScience/
+  269  git remote add origin https://github.com/angelrps/MasterDataScience.git
+  270  angelrps
+  271  0yjo43e6
+  272  git remote add origin https://github.com/angelrps/MasterDataScience.git
+  273  git push origin maste
+  274  git push origin master
+  275  git remote show origin
+  276  echo "creating new file just to test" > myfiletotest.txt
+  277  git add myfiletotest.txt 
+  278  git commit -m "first commit" myfiletotest.txt 
+  279  git push origin master
+  280  ls
+  281  cd rep_exercise/
+  282  cd ..
+  283  ls
+  284  git add rep_exercise/
+  285  git commit rep_exercise/
+  286  git commit -m "adding my rep_exercise folder to my master folder"
+  287  git push origin master
+  288  cd git
+  289  cd..
+  290  cd ..
+  291  rm rf kk
+  292  rm -rf kk
+  293  rm -rf kk2
+  294  cd MasterDataScience/
+  295  mkdir 20191115_Git_CommandLine
+  296  mv rep_exercise/ 20191115_Git_CommandLine/
+  297  git commit 20191115_Git_CommandLine/
+  298  git push origin master
+  299  git add 20191115_Git_CommandLine/
+  300  git rm --cached 20191115_Git_CommandLine/rep_exercise
+  301  mv 20191115_Git_CommandLine/rep_exercise/ git
+  302  cd --
+  303  cd git
+  304  cd MasterDataScience/
+  305  rm -rf git
+  306  git push origin master
+  307  git add 20191115_Git_CommandLine/
+  308  git commit  20191115_Git_CommandLine/
+  309  git commit -m "añadiendo primera clase" 20191115_Git_CommandLine/
+  310  git status
+  311  git commit -a
+  312  git commit -ma "testing"
+  313  git pull origin master
+  314  mkdir rep_exercise
+  315  cd rep_exercise/
+  316  echo "flkdf" > myfile.md
+  317  git add myfile.md
+  318  git commit myfile.md 
+  319  git commit -m "test" myfile.md 
+  320  git push origin master
+  321  git status
+  322  cd ..
+  323  rm -rf rep_exercise/
+  324  git push origin master
+  325  git status
+  326  cd 20191115_Git_CommandLine/
+  327  git add 20191115_Apuntes_Git_CommandLine.docx
+  328  git add MasterDataScience/201911115_Git_CommandLine/20191115_Apuntes_Git_Commandline.docx
+  329  cd ..
+  330  git add 20191115_Git_CommandLine
+  331  git status
+  332  git commit -m "adding class folder" 20191115_Git_CommandLine
+  333  git checkout master
+  334  git rm -rf rep_exercise
+  335  git checkout master
+  336  git rm -rf rep_execise/myfile.md
+  337  git rm -rf rep_exercise/myfile.md
+  338  ls
+  339  git push origin master
+  340  git status
+  341  git reset HEAD rep_exercise/myfile.md
+  342  git status
+  343  cd
+  344  whoami
+  345  echo welcom to master
+  346  echo "World\
+  347  is mine
+  348  "
+  349  cat /etc/os-release
+  350  ls
+  351  cd DS_CL_files/
+  352  ls
+  353  cd shell
+  354  ls
+  355  cat -n Finn.txt 
+  356  ls
+  357  cat -n Text_example.txt
+  358  echo $SHELL
+  359  cat /proc/cpuinfo
+  360  echo $PWD
+  361  pwd
+  362  cd -
+  363  cd ../
+  364  cd ./
+  365  ls
+  366  cd ./opentraveldata/
+  367  ls
+  368  cd ../
+  369  ls -1
+  370  ls -s
+  371  ls -l
+  372  echo "$SHELL"
+  373  echo '$SHELL'
+  374  echo "$SHELL $PWD"
+  375  ls
+  376  cd DS_CL_files/
+  377  ls
+  378  cd shell/
+  379  ls
+  380  ls -1
+  381  ls -l
+  382  ls -a
+  383  ls -R
+  384  ls -s
+  385  ls -H
+  386  ls -1 -s
+  387  ks -1s
+  388  ls -1s
+  389  .
+  390  ls -a
+  391  ls -la
+  392  cat Text_example.txt Text_example.txt.copy
+  393  cat -n Text_example.txt Text_example.txt.copy
+  394  ls -a
+  395  ls -1
+  396  ls -l
+  397  chmod u+e,g+e,o+e Finn.txt 
+  398  chmod u+e,g+e Finn.txt 
+  399  chmod help
+  400  chmod --help
+  401  chmod u+e,g+e Text_example.txt
+  402  chmod u-w Text_example.txt
+  403  ls -la
+  404  cd
+  405  touch newtouchfile
+  406  mkdir jueves21/practicando/directorios
+  407  mkdir -p jueves21/practicando/directorios
+  408  rm -rf jueves21/
+  409  mkdir -p jueves21/practicando/directorios
+  410  rm -r jueves21/
+  411  cd one
+  412  mv two ../
+  413  mv three ../
+  414  cd ..
+  415  mv one one_new
+  416  mv -i one_new one_new_again
+  417  rm -i one_new_again/
+  418  rm -r -i one_new_again/
+  419  no
+  420  rm -r two
+  421  rm -r three
+  422  mv first_dir/ first_dir_OLD
+  423  mkdir first_dir
+  424  cd first_dir
+  425  echo text_file.txt
+  426  touch text_file.txt
+  427  ls -1s
+  428  ls -1a
+  429  ls -la
+  430  ls -l
+  431  chmod g+e, o+w text_file.txt 
+  432  chmod g-w, o+w text_file.txt 
+  433  chmod g-w,o+w text_file.txt 
+  434  ls -a
+  435  ls -l
+  436  chmod g+e,o+w text_file.txt 
+  437  mkdir sub1 sub2 text_file
+  438  cp text_file sub1
+  439  cp text_file.txt /sub1
+  440  cp text_file.txt sub1
+  441  mv sub1/text_file.txt sub2/text_file.txt.2
+  442  cp sub1 sub3
+  443  cp -r sub1 sub3
+  444  rm sub3
+  445  rm -r sub3
+  446  cp -r sub1 sub3
+  447  rm -r sub3
+  448  cp -r /sub1 /sub3
+  449  cp -r ./sub1 /sub3
+  450  cp -r ./sub1 sub3
+  451  cd sub2
+  452  ls
+  453  mv text_file.txt.2 text_file.txt.backup
+  454  mv text_file.txt.backup ../.text_file.txt.backup
+  455  cd ..
+  456  rm -rf sub2
+  457  man ls
+  458  cd ..
+  459  ls
+  460  cd DS
+  461  cd DS_CL_files/
+  462  cd shell/
+  463  less Finn.txt
+  464  less -N Finn.txt
+  465  cd ..
+  466  less -N opentraveldata/
+  467  cd opentraveldata/
+  468  less -N optd_aircraft.csv 
+  469  alias
+  470  ls type
+  471  type ls
+  472  type cd
+  473  ALIAS
+  474  alias
+  475  alias p="pwd"
+  476  alias
+  477  which ls
+  478  which python
+  479  ls type
+  480  whereis man ls
+  481  crtl + k : cortar desde cursor hasta el final
+  482  les
+  483  cd
+  484  ec
+  485  history -i
+  486  history
+  487  ls
+  488  cd
+  489  echo $DATE
+  490  echo $date
+  491  echo "date"
+  492  echo `date`
+  493  ls
+  494  cd DS_CL_files/
+  495  cd shell/
+  496  ls
+  497  ls -n
+  498  cat -m
+  499  cat -n
+  500  cat /etc/os-release
+  501  cd
+  502  cd DS
+  503  cd DS_CL_files/
+  504  cd shell/
+  505  ls
+  506  cat Text_example.text
+  507  cat Text_example.txt
+  508  cat -l Text_example.txt
+  509  cat -1 Text_example.txt
+  510  cat -n Text_example.txt
+  511  cat -n Text_example.txt > Text_example_withlinenumber.Txt
+  512  cat -n Text_example.txt >> Text_example_withlinenumber.Txt
+  513  echo "This file is create by whoami"
+  514  echo "This file is create by " whoami
+  515  echo "This file is create by " $whoami
+  516  echo $(whoami)
+  517  echo "This file is create by " $(whoami)
+  518  echo "This file is create by" $(whoami) "on" $(date)
+  519  echo "This file is create by" $(whoami) "on:" $(date) > FileCreatedByMe.txt
+  520  cd ..
+  521  ls -1
+  522  cd opentraveldata/
+  523  ls
+  524  wc optd_aircraft.csv -c
+  525  wc optd_aircraft.csv
+  526  wc optd_aircraft.csv -m
+  527  cd ..
+  528  ls
+  529  cd shell
+  530  wc Text_example.txt
+  531  cat Text_example.txt
+  532  cat Text_example.txt | wc
+  533  cat Text_example.txt | wc -l
+  534  hea Text_example.txt
+  535  head Text_example.txt
+  536  head -n Text_example.txt
+  537  head -n3 Text_example.txt
+  538  head -n2 Text_example.txt
+  539  cd
+  540  ls
+  541  cd DS_CL_files/
+  542  ls
+  543  cd
+  544  cd ~/Data
+  545  cd DS_CL_files/
+  546  cd shell/
+  547  ls
+  548  cd ..
+  549  ls
+  550  cd opentraveldata/
+  551  ls
+  552  ls -S
+  553  ls -1S
+  554  cat ls -1s | head -2
+  555  cat ls -S
+  556  ls -S | head -2
+  557  ls -s | head -2 > three_largest_file.txt
+  558  cat optd_aircraft.csv
+  559  cat optd_aircraft.csv optd_por_public.csv
+  560  cat optd_aircraft.csv optd_por_public.csv > three_largest_file.txt 
+  561  history -20
+  562  history -n20
+  563  history
+  564  history -15
+  565  history -100
+  566  man history
+  567  history | tail -20 > last20commands.txt
+  568  cd ..
+  569  cd shell/
+  570  head -3 Text_example.txt
+  571  tail -n-2 Text_example.txt
+  572  tail -n+2 Text_example.txt
+  573  cat Text_example.txt
+  574  tail -n+3 Text_example.txt
+  575  tail -n+3 Text_example.txt | head -n +3
+  576  cd ..
+  577  ls
+  578  cd opentraveldata/
+  579  wc -l optd_aircraft.csv
+  580  cd ..
+  581  head -5 Finn.txt | wc -w
+  582  cd shell/
+  583  head -5 Finn.txt | wc -w
+  584  history
+  585  cat -n ~/.history
+  586  cd
+  587  cat -n ~/.history
+  588  history > 20191122_MyStudyCommandsHistory.txt
