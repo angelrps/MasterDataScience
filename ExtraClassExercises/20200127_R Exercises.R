@@ -65,4 +65,94 @@ df_baraja2[df_baraja2$carta == 'as','puntos'] <- 0
 df_baraja2
 
 
+# Ejercicio Máquina Tragaperras
+# Para simular estos datos necesitamos hacer dos cosas:
 
+# 1. Generar combinaciones de tres elementos de entre los siguientes símbolos: 
+# diamonds (DD), sevens (7), triple bars (BBB), double bars (BB), single bars (B), cherries (C), and zeroes (0). 
+# Cada símbolo aparece según su probabilidad en la rueda.
+
+#2. Asignar un premio a cada combinación Las máquinas tragaperras de la marca Manitoba tienen el siguiente esquema de premios:
+#PREMIOS
+# DD DD DD                100
+# 7 7 7                   80
+# BBB BBB BBB             40
+# BB BB BB                25
+# B B B                   10
+# C C C                   10
+# Any combination of bar  5
+# C C *                   5
+# C * C                   5
+# * C C                   5
+# C * *                   2
+# * C *                   2
+# * * C                   2
+
+#PROBABILIDADES
+# DD  0.03
+# 7   0.03
+# BBB 0.06
+# BB  0.1
+# B   0.25
+# C   0.01
+# 0   0.52
+
+
+
+# declaramos vector de simbolos y de scores
+wheel <- c('DD', '7', 'BBB', 'BB', 'B', 'C', '0')
+probability <- c(0.03, 0.03, 0.06, 0.1, 0.25, 0.01, 0.52)
+
+# la función get_symbols nos devolverá una tirada de la máquina (simulación de una jugada)
+get_symbols <- function(){
+  return (sample(wheel,3, replace=TRUE, prob = probability))
+}
+
+# la función get_score nos dirá el premio ganado
+get_score <- function(s){
+  same <- function(s){
+    return(s[1]==s[2] & s[2]==s[3])
+  }
+  bars <- sum(s %in% c('BBB','BB','B'))
+  Cs <- sum(s %in% c('C', 'C', 'C'))
+  
+  # if symbols are the same, except 0, 0, 0
+  if(same(s) & s[1]!=0){
+    if(s[1]=='DD'){
+      prize = 100
+    }else if(s[1]=='7'){
+      prize = 80
+    }else if(s[1]=='BBB'){
+      prize = 40
+    }else if(s[1]=='BB'){
+      prize = 25
+    }else{
+      prize = 10
+    }
+  }else if(bars==3 | Cs==2){ # if all symbols are bars or 2 Cs
+    prize = 5
+  }else if(Cs==1){ # si hay una C
+    prize = 2
+  }else{
+    prize = 0
+  }
+}
+
+play <- function(){
+  #get the symbols
+  s <- get_symbols()
+  #show the symbols
+  print(s)
+  #get the score
+  score <- get_score(s)
+  #show the score
+  paste('Prize: ', score)
+}
+
+combos <- expand.grid(wheel,wheel,wheel, stringsAsFactors = FALSE)
+View(combos)
+
+dir <- system.file(package = 'dslabs')
+dir
+install.packages('dslabs')
+library('dslabs')
