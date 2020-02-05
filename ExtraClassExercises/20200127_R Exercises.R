@@ -156,3 +156,153 @@ dir <- system.file(package = 'dslabs')
 dir
 install.packages('dslabs')
 library('dslabs')
+
+
+# trabajando con el fichero babys.
+# calcular la media del peso al nacer para los bebes de madres
+# fumadoras y no fumadoras
+babies <- read.delim("Datasets/babies.txt", sep = '\t', header=T, stringsAsFactors = F)
+head(babies)
+mean(babies$bwt[babies$smoke==1])
+mean(babies$bwt[babies$smoke==0])
+
+
+
+# De las siguientes parejas, cual dirias que tuvo la mayor mortalidad infantil en 2015?
+# nos aseguramos de tener cargado el paquete dplyr
+library(dplyr)
+data(gapminder)
+gm <- read.csv("Datasets/Gapminder.csv")
+gm2015 <- gm%>%
+  filter(year==2015)
+gm2015
+
+#++ Sri Lanka or Turkey
+gm2015 %>%
+  filter(country=="Sri Lanka" | country=="Turkey")
+#++ Poland or South Korea
+gm2015 %>%
+  filter(country %in% c("Poland", "South Korea"))
+#++ Malaysia or Russia
+gm2015 %>%
+  filter(country %in% c("Malaysia", "Russia"))
+#++ Pakistan or Vietnam
+gm2015 %>%
+  filter(country %in% c("Pakistan", "Vietnam"))
+#++ Thailand or South Africa
+gm2015 %>%
+  filter(country %in% c("Thailand", "South Africa"))
+
+# EJERCICIO CON SUMMARIZE()
+library(dslabs)
+heights
+heights %>%
+  summarize(media=mean(height),
+            max=max(height),
+            min=min(height),
+            mediana=median(height),
+            standard_deviation=sd(height))
+
+# agrupando antes de aplicar summarize()
+heights %>%
+  group_by(sex) %>%
+  summarize(mean(height))
+
+# CALCULA LA MEDIA DEL PESO AL NACER PARA MADRES FUMADORAS Y NO FUMADORAS
+# USANDO SUMMARIZE()
+babies %>%
+  group_by(smoke)%>%
+  summarize(media_peso = mean(bwt))
+
+
+# SETNAMES()
+b_setname <- babies
+b_setname %>% setNames(c("uno", "dos", "tres", "cuatro", "cinco", "seis", "siete"))
+
+
+h <- heights %>%
+  filter(sex=="Female") %>%
+  summarize(media=mean(height)) %>%
+  .$'media'
+
+h$'media'
+
+# Ejercicio NCHS DATA.Paquete de datos: NHANES. 
+# 1. Tensión sanguínea: Seleccionemos a las mujeres entre 20 y 29 años.
+# AgeDecade es una variable categórica que contiene las edades. 
+# La categoría es " 20-29", con un espacio delante! Cual es su media? 
+# (BPSysAve variable). Guardalo en una variable llamada ref. 
+# Hint: Usa filter y summarize y luego usa na.rm = TRUE al calcular su meda y desviacion estandard. 
+# Tambien podrias quitar los missing usando filter.
+
+nhanes <- read.delim("Datasets/NHANES.txt", stringsAsFactors = F)
+nhanes %>%
+  select(Gender, AgeDecade, BPSysAve) %>%
+  filter(!is.na(nhanes$BPSysAve)) %>%
+  filter(Gender == "female" & AgeDecade == " 20-29") %>%
+  summarize(media= mean(BPSysAve))
+
+ 
+# 2. Usando pipe asigna ese valor a una variable llamada ref_avg. 
+# Hint: Use the code similar to above and then pull. 
+# 3. min, max, media y desviación estándar para cada grupo de edad dentro de las mujeres
+nhanes %>%
+  select(Gender, AgeDecade, BPSysAve) %>%
+  filter(!is.na(nhanes$BPSysAve)) %>%
+  filter(Gender == "female") %>%
+  group_by(AgeDecade) %>%
+  summarize(minimo = min(BPSysAve), 
+            maximo = max(BPSysAve),
+            media = mean(BPSysAve),
+            desv_std = sd(BPSysAve))
+
+# 5. Hacer lo mismo para los hombres
+nhanes %>%
+  select(Gender, AgeDecade, BPSysAve) %>%
+  filter(!is.na(nhanes$BPSysAve)) %>%
+  filter(Gender == "male") %>%
+  group_by(AgeDecade) %>%
+  summarize(minimo = min(BPSysAve), 
+            maximo = max(BPSysAve),
+            media = mean(BPSysAve),
+            desv_std = sd(BPSysAve))
+# 6. Usando group_by(AgeDecade, Gender), repite 4 y 5 con una sola linea de código.
+nhanes %>%
+  select(Gender, AgeDecade, BPSysAve) %>%
+  filter(!is.na(nhanes$BPSysAve)) %>%
+  group_by(AgeDecade, Gender) %>%
+  summarize(minimo = min(BPSysAve), 
+            maximo = max(BPSysAve),
+            media = mean(BPSysAve),
+            desv_std = sd(BPSysAve))
+# 7. Para los hombres entre 40-49 compara su presion sistolica para las distintas 
+# razas reportadas en la variable Race1 y ordenalas de mayor a menor.
+nhanes %>%
+  select(Gender, AgeDecade, Race1, BPSysAve) %>%
+  filter(!is.na(nhanes$BPSysAve)) %>%
+  filter(Gender == "male" & AgeDecade == " 40-49") %>%
+  group_by(Race1) %>%
+  summarize(media = mean(BPSysAve)) %>%
+  arrange(desc(media))
+
+
+# EJERCICIOS TIDY / WIDE
+# 1. Niveles de CO2
+# co2 es un vector CON medidas de 12 meses de niveles de co2 a alo largo de varios años
+library(dplyr)
+library(tidyverse)
+View(co2)
+
+# definimos los datos en formato wide,
+#esto lo hace la profe que conoce cómo están definidos los datos en co2
+co2_wide <- data.frame(matrix(co2, ncol=12, byrow=TRUE)) %>%
+  setNames(1:12) %>%
+  mutate(year=as.character(1959:1997))
+co2_wide
+
+# ahora pasamos la tabla a formato tidy
+co2_tidy <- co2_wide %>%
+  pivot_longer(-year,
+               names_to = "month",
+               values_to = "co2_level")
+co2_tidy                        
