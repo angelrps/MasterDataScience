@@ -34,6 +34,7 @@ points(murders$total,murders$population/10^5,lty=2)
 
 # la funcion lm nos calcula los valores a y b para dibujar la recta regresion lineal
 lm(formula=murders$population/10^5~murders$total)
+?lm
 # con abline dibujamos esa línea
 abline(a=9.138, b=0.28,col="red")
 
