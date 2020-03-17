@@ -1,0 +1,14 @@
+El orden sería:
+1) Regression con House Price SIMPLE
+ Con este notebook podéis probar todos los modelos y métricas que explicamos para Regression.
+
+2) Classification con Car Speed.
+Aquí podéis practicar todo sobre Classification.
+
+3) Regression con House Price Advanced.
+Aquí empezamos a usar Ensemble Learning.
+
+4) Classification con Prime Indian.
+Ensemble Learning aplicado a Classification.
+
+Mi consejo es que antes de empezar con los notebooks, completéis los Snippets en github con todos los códigos para interiorizar los conceptos y tener los códigos preparados.
