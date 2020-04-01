@@ -8,3 +8,5 @@ bookings_wn_dup.csv
 searches_wn_dup.csv
 200111_DataScienceChallenge/bookings.sample.csv.bz2
 200110_Numpy_Pandas_DataFrames_Matplotlib/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2019_10.csv
+yellow_tripdata_2019-01.csv
+2017_Yellow_Taxi_Trip_Data.csv
